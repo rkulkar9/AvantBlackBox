@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+ext {
+    seleniumVersion = '2.46.0'
+}
+
+buildscript {
+
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile(group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: seleniumVersion)
+    compile(group: 'org.seleniumhq.selenium', name: 'selenium-java', version: seleniumVersion)
+
+    testCompile(group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: seleniumVersion)
+    testCompile(group: 'org.seleniumhq.selenium', name: 'selenium-java', version: seleniumVersion)
+
+}
+
